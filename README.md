@@ -20,7 +20,7 @@ Enough of having to remember to login and jump through hoops just to get the sch
 If you are given access to this project and/or its' sourcecode,  
 **YOU ASSUME ALL POSSIBLE LIABILITIES IF YOU USE IT**.\*
 
-*\* This code is experimental and may pose a threat to the sensitive information that you feed to it. SchedulePortal, itself, is not maliciously designed. However, consider yourself sufficiently warned should anything happen.*
+> *\* This code is experimental and may pose a threat to the sensitive information that you feed to it. SchedulePortal, itself, is not maliciously designed. However, consider yourself sufficiently warned should anything happen.*
 
 ---
 
