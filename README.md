@@ -27,19 +27,24 @@ If you are given access to this project and/or its' sourcecode,
 ## Development
 
 ### Planned Features:
-*These are the core features that are to be implement in order for me to consider this project as it's Minimum Viable Product (MVP)*
+> *These are the core features that are to be implement in order for me to consider this project as it's Minimum Viable Product (MVP)*
 
-- [x] Capture Schedule (*implemented: Version 0.1.0*)
-- [ ] Create a System Notification
+- [x] Capture Schedule ( *Implemented: Version 0.1.0* )
+- [ ] Create a System Notification ( *Next Step* )
 - [ ] Allow User Setup & Improved Interaction
 - [ ] Sleep, Wake, and Run on Start Up
 
 ### Possible Features:  
-*These are considered to be beyond the scope of the project, and are "Nice-to-Have's". So, I wont promiss that I will or even have the current know how to make them happen. 
+> *These are considered to be beyond the scope of the project, and are "Nice-to-Have's". So, I wont promiss that I will or even have the current know how to make them happen.*
 
 - [ ] Server Hosted - Will remove limitations of being in one geological location and constantly monitors current date as to not miss a schedule call.
 
 ### Known Bugs/Issues:
+
+### Other:
+> *Anything related to the project in such a way that affects it's timeline, but doesnt actually change anything in the code itself*
+
+- [ ] Move to a github repository for remote access, and cloud backup **( *Currently Active* )**
 
 ---
 
