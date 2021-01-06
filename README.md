@@ -1,2 +1,47 @@
-# SchedulePortal
-This project's purpose is to, on a user selected day/time, log in to a schedule online, save a screenshot, and then notify the user when their schedule is ready to view.
+# SchedulePortal  
+Version: 0.1.0
+
+*(c) 2021 Garret Burkhardt, All rights reserved*
+
+---
+
+## Summary
+This project's purpose is to, on the user's selected day/time, login to a schedule online. It will save a screenshot, and then notify the user when their schedule is ready to view, before returning to hibernation.  
+Enough of having to remember to login and jump through hoops just to get the schedule in your hands, Schedual Portal Two is here to help you spend your time on more important things like Minecraft or Stardew Valley.  
+
+*Currently runs off the user's computer, but in the future it may be migrated to a server to remove the dependancy of the computer being on.*
+
+---
+
+## Usage
+***USE AT YOUR OWN RISK***  
+**SchedulePortal is for demonstrational purposes by the author only.** SchedulePortal is not to be shared or sold by any means by anyone other than the author. Any Commercial use of SchedulePortal is strictly prohibited.  
+
+If you are given access to this project and/or its' sourcecode,  
+**YOU ASSUME ALL POSSIBLE LIABILITIES IF YOU USE IT**.
+
+*This code is experimental and may pose a threat to the sensitive information that you feed to it. SchedulePortal, itself, is not maliciously designed. However, consider yourself sufficiently warned should anything happen.*
+
+---
+
+## Planned Features
+
+- [x] Capture Schedule (*implemented: Version 0.1.0*)
+- [ ] Create a System Notification
+- [ ] Allow User Setup & Improved Interaction
+- [ ] Sleep, Wake, and Run on Start Up
+
+---
+
+## Sourcecode Info
+**File:** "SchedulePortal.py" *(Main Source File)*
+
+**Dependencies:**
+|Library | Version | Purpose|
+| :--- | :---: | :--- |
+|Selenium | 3.141.0 | Controls the Webdriver |
+
+---
+
+Document History:  
+06-JAN-2021 - <burkhardtgarret710@gmail.com> - Created README
