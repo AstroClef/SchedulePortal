@@ -34,7 +34,7 @@ If you are given access to this project and/or its' sourcecode,
 - [ ] Allow User Setup & Improved Interaction
 - [ ] Sleep, Wake, and Run on Start Up
 
-### Possible Features:  
+### Feature Wishlist:  
 > *These are considered to be beyond the scope of the project, and are "Nice-to-Have's". So, I wont promiss that I will or even have the current know how to make them happen.*
 
 - [ ] Server Hosted - Will remove limitations of being in one geological location and constantly monitors current date as to not miss a schedule call.
