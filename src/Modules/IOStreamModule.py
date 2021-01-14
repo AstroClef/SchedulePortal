@@ -23,22 +23,18 @@ def checkDirectory():
             dm.chromeDriver.close()
 
 
-# Login Data Management
-# TODO: Create a Check Cystem that makes sure that the file Exists
-# Handle by creating the file
-# TODO: Create a Check System that makses sure user and password elements exist
-# Handle by asking for input and saving the new data to the file
-savedUser = ""
-savedPassword = ""
+# FILE READWRITE MANAGEMENT
+def fileRead(filename, fileType):
+    with open(os.path.join(PROGRAM_DIRECTORY, "..\\resources\\Data\\", filename), "r") as readfile:
+        if fileType == "JSON":
+            accessed_data = json.loads(readfile.read())
+        else:
+            accessed_data = readfile.read()
+        return accessed_data
+        # print(str(accessed_data["username"]) + " " + str(accessed_data["password"]))
 
-with open(os.path.join(PROGRAM_DIRECTORY, "..\\resources\\Data\\", "logindata.json"), "r") as activefile:
-    ld = activefile.read()
 
-logindata = json.loads(ld)
-
-print(str(logindata["username"]) + " " + str(logindata["password"]))
-
-# Screenshot File Management
+# SCREENSHOT FILE MANAGEMENT
 IMAGE_DEFAULT_LOCATION = os.path.join(PROGRAM_DIRECTORY, "..\\resources\\ScheduleCaptures")
 dynamic_image_directory = IMAGE_DEFAULT_LOCATION
 

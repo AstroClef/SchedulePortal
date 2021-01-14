@@ -1,4 +1,4 @@
-from Modules import DriverModule as dm, LoginModule as lm, IDModule as idm
+from Modules import DriverModule as dm, LoginModule as lm, IDModule as idm, IOStreamModule as inout
 import os
 
 
@@ -6,7 +6,7 @@ def main():
     lm.login(idm.myPublixID)
     dm.screenCap()
     dm.chromeDriver.close()
-    print("Schedule Portal Successful and Terminated")
+    print("-Schedule Portal Successful and Terminated-")
 
 
 if __name__ == '__main__':
