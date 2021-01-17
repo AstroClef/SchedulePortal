@@ -1,6 +1,5 @@
 from Modules import DriverModule as dm
 
-
 def login(loginID):
     print("*Logging In*")
     dm.chromeDriver.get(loginID.address)
