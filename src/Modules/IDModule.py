@@ -1,9 +1,18 @@
+import sys
 from Modules import IOStreamModule as iom
-from Classes import PublixIDClass
+from Classes import PublixIDClass, GitHubIDClass
 
-# TODO: Create a Check Cystem that makes sure that the file Exists
-# Handle by creating the file
-# TODO: Create a Check System that makses sure user and password elements exist
-# Handle by asking for input and saving the new data to the file
-myPublixID = PublixIDClass.PublixID(str(iom.fileRead("logindata.json", "JSON")["username"]),
-                                    str(iom.fileRead("logindata.json", "JSON")["password"]))
+idKeys = iom.fileRead("logindata.json", "JSON")
+
+
+def getKeys(platform, keytype):
+    platform_keys = idKeys[str(platform)]
+    requested_key = platform_keys[str(keytype)]
+    return requested_key
+
+
+myPublixID = PublixIDClass.PublixID(str(getKeys("publix", "username")), str(getKeys("publix", "password")))
+myGithubID = GitHubIDClass.GitHubID(str(getKeys("github", "username")), str(getKeys("github", "password")))
+
+if __name__ == '__main__':
+    sys.exit("!--Code ran from improper Entry Point--!")

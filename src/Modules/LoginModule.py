@@ -1,4 +1,6 @@
+import sys
 from Modules import DriverModule as dm
+
 
 def login(loginID):
     print("*Logging In*")
@@ -10,3 +12,7 @@ def login(loginID):
     dm.fill_form_element(loginID.passwordElementID, loginID.password)
     dm.submit_form(loginID.submitElementID)
     print("-Login Completed-")
+
+
+if __name__ == '__main__':
+    sys.exit("!--Code ran from improper Entry Point--!")

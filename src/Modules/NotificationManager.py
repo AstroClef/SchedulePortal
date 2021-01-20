@@ -1,3 +1,5 @@
+import sys
+
 from plyer import notification
 
 
@@ -22,3 +24,7 @@ def sendErrorNote(error_description):
                         ticker=error_description,
                         toast=False
                         )
+
+
+if __name__ == '__main__':
+    sys.exit("!--Code ran from improper Entry Point--!")

@@ -1,5 +1,5 @@
-from Modules import DriverModule as dm, LoginModule as lm, IDModule as idm, IOStreamModule as inout
-import os
+import sys
+from Modules import DriverModule as dm, LoginModule as lm, IDModule as idm
 
 
 def main():
@@ -13,4 +13,4 @@ if __name__ == '__main__':
     print("-Entry Execution-")
     main()
 else:
-    print("!--Code ran from improper Entry Point--!")
+    sys.exit("!--Code ran from improper Entry Point--!")

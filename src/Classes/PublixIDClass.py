@@ -1,3 +1,6 @@
+import sys
+
+
 class PublixID:
     def __init__(self, username, password):
         self.name = "Publix"
@@ -7,3 +10,7 @@ class PublixID:
         self.submitElementID = "submitButton"
         self.username = username
         self.password = password
+
+
+if __name__ == '__main__':
+    sys.exit("!--Code ran from improper Entry Point--!")

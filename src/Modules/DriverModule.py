@@ -1,8 +1,10 @@
-from Modules import IOStreamModule as iom, NotificationManager as nm
+import os
+import sys
 import datetime as dt
 import time as t
+
+from Modules import IOStreamModule as iom, NotificationManager as nm
 from selenium import webdriver
-import os
 
 chromeDriver = webdriver.Chrome(executable_path=os.path.join(iom.PROGRAM_DIRECTORY,
                                                              "../resources/WebDriver/chromedriver.exe"))
@@ -23,8 +25,12 @@ def submit_form(submitElementID="", submitElementName=""):
 def screenCap():
     todays_date = str(dt.date.today())
     directory = iom.getImageDirectory()
-    iom.checkDirectory()
+    iom.checkDirectory(directory)
     t.sleep(5)
     chromeDriver.save_screenshot(directory + "/ScheduleScreenshot_" + todays_date + ".png")
     nm.sendCompletionNote(directory)
     print("-Screenshot Captured-")
+
+
+if __name__ == '__main__':
+    sys.exit("!--Code ran from improper Entry Point--!")
