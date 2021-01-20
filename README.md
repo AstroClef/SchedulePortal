@@ -28,7 +28,7 @@ So how did SchedulePortal Solve this?
 
 Schedule Portal takes a 4 minute process and reduces it to 9s! I timed it.  
 
-__THAT'S A 2600% RETURN ON MY TIME!__ 
+__THAT'S A 2567% RETURN ON MY TIME!__ 
 
 ---
 
