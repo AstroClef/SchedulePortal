@@ -1,4 +1,10 @@
 {
-  "username" : "p1530404",
-  "password" : "p@ssword1"
+  "publix" : {
+    "username" : "ExampleUserName",
+    "password": "ExampleUserName"
+  },
+  "github" : {
+    "username" : "ExampleUserName",
+    "password" : "ExampleUserName"
+  }
 }

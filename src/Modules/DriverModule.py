@@ -1,9 +1,10 @@
-from Modules import IOStreamModule as iom
+import os
+import sys
 import datetime as dt
 import time as t
-from selenium import webdriver
-import os
 
+from Modules import IOStreamModule as iom, NotificationManager as nm
+from selenium import webdriver
 
 chromeDriver = webdriver.Chrome(executable_path=os.path.join(iom.PROGRAM_DIRECTORY,
                                                              "../resources/WebDriver/chromedriver.exe"))
@@ -11,22 +12,25 @@ chromeDriver = webdriver.Chrome(executable_path=os.path.join(iom.PROGRAM_DIRECTO
 
 def fill_form_element(elementID, userInput):
     activeElement = chromeDriver.find_element_by_id(elementID)
-    if activeElement:
-        activeElement.send_keys(userInput)
-    else:
-        print("Website form Element ID, " + elementID + " from \""
-              + str(chromeDriver.current_url) + "\", does not exist.")
-        print("Please inform the program author with a screenshot of this error.")
+    activeElement.send_keys(userInput)
 
 
-def submit_form(submitElementID):
-    chromeDriver.find_element_by_id(submitElementID).click()
+def submit_form(submitElementID="", submitElementName=""):
+    if submitElementID is not None:
+        chromeDriver.find_element_by_id(submitElementID).click()
+    elif submitElementName is not None:
+        chromeDriver.find_element_by_name(submitElementName).click()
 
 
 def screenCap():
     todays_date = str(dt.date.today())
     directory = iom.getImageDirectory()
-    iom.checkDirectory()
+    iom.checkDirectory(directory)
     t.sleep(5)
     chromeDriver.save_screenshot(directory + "/ScheduleScreenshot_" + todays_date + ".png")
+    nm.sendCompletionNote(directory)
     print("-Screenshot Captured-")
+
+
+if __name__ == '__main__':
+    sys.exit("!--Code ran from improper Entry Point--!")

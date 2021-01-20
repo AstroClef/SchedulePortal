@@ -1,37 +1,46 @@
-from Modules import DriverModule as dm
 import json
 import os
+import sys
+
+from Modules import DriverModule as dm
 
 # General Program Directory Navigation
 PROGRAM_DIRECTORY = os.path.abspath(os.getcwd())
 
 
-def checkDirectory():
-    dirExists = os.path.isdir(dynamic_image_directory)
-    if dirExists:
-        # Moves on to saving screenshot
-        print("Current image directory exists.")
-        print(dynamic_image_directory)
+def createDirectory(new_directory):
+    print("*Creating Directory*")
+    try:
+        os.makedirs(new_directory)
+    except OSError as error:
+        print(error)
+        dm.chromeDriver.close()
+
+
+def checkDirectory(checked_directory):
+    dirExists = os.path.isdir(checked_directory)
+    fileExists = os.path.isfile(checked_directory)
+    if dirExists or fileExists:
+        print("Current directory exists.")
+        print(checked_directory)
+        return True
     else:
-        # Creates the new directory
-        print("Image directory does not exist.")
-        print("*Creating New Image Directory*")
-        try:
-            os.makedirs(dynamic_image_directory)
-        except OSError as error:
-            print(error)
-            dm.chromeDriver.close()
+        return False
 
 
 # FILE READWRITE MANAGEMENT
-def fileRead(filename, fileType):
-    with open(os.path.join(PROGRAM_DIRECTORY, "..\\resources\\Data\\", filename), "r") as readfile:
-        if fileType == "JSON":
-            accessed_data = json.loads(readfile.read())
-        else:
-            accessed_data = readfile.read()
-        return accessed_data
-        # print(str(accessed_data["username"]) + " " + str(accessed_data["password"]))
+def fileRead(file_name, file_type):
+    file_path = os.path.join(PROGRAM_DIRECTORY, "..\\resources\\Data\\", file_name)
+    if checkDirectory(file_path):
+        with open(file_path, "r") as readfile:
+            if file_type == "JSON":
+                accessed_data = json.loads(readfile.read())
+            else:
+                accessed_data = readfile.read()
+            return accessed_data
+    else:
+        dm.chromeDriver.close()
+        raise FileNotFoundError(file_name + " could not be found. \nTerminating Program...")
 
 
 # SCREENSHOT FILE MANAGEMENT
@@ -39,10 +48,9 @@ IMAGE_DEFAULT_LOCATION = os.path.join(PROGRAM_DIRECTORY, "..\\resources\\Schedul
 dynamic_image_directory = IMAGE_DEFAULT_LOCATION
 
 
-# TODO: UX [Priority: LOW] - Allow the user to change image save location.
-def setImageDirectory(newDirectory):
-    pass
-
-
 def getImageDirectory():
-    return IMAGE_DEFAULT_LOCATION
+    return dynamic_image_directory
+
+
+if __name__ == '__main__':
+    sys.exit("!--Code ran from improper Entry Point--!")
