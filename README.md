@@ -26,7 +26,8 @@ So how did SchedulePortal Solve this?
 - _Minor Problem_: If Schedule Portal simply saved the photo in the directory, I would need to remember to check it and I also wouldnt know when the file would be there, so I'd forget.
     - Notifications!!! Schedule portal pulls from the Plyer API to trigger system notifications that let me know when and where the photo is.
 
-Schedule Portal takes a 4 minute process and reduces it to 9s! I timed it.
+Schedule Portal takes a 4 minute process and reduces it to 9s! I timed it.  
+
 __THAT'S A 213.36% RETURN ON MY TIME!__ 
 
 ---
